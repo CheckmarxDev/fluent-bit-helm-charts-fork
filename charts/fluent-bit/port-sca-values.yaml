@@ -325,14 +325,14 @@ testFramework:
     repository: busybox
     tag: latest
 tolerations:
-        - key: "environment"
-          operator: "Equal"
-          value: "prod"
-          effect: "NoSchedule"
-        - key: "service"
-          operator: "Equal"
-          value: "sca-source-resolver"
-          effect: "NoSchedule"
+  - key: "environment"
+    operator: "Equal"
+    value: "prod"
+    effect: "NoSchedule"
+  - key: "service"
+    operator: "Equal"
+    value: "sca-source-resolver"
+    effect: "NoSchedule"
 updateStrategy:
   rollingUpdate:
     maxUnavailable: 1
